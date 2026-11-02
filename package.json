@@ -1,0 +1,61 @@
+{
+  "name": "elektrik-hesap",
+  "version": "0.1.0",
+  "description": "Zero-dependency TypeScript library and CLI for basic electrical engineering calculations. Educational/pre-design aid only.",
+  "private": true,
+  "license": "MIT",
+  "author": "FALCREB",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/berkantshn/elektrik-hesap.git"
+  },
+  "homepage": "https://github.com/berkantshn/elektrik-hesap#readme",
+  "type": "module",
+  "sideEffects": false,
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "bin": {
+    "elektrik-hesap": "./dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "docs",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": "^22.12.0 || >=24.0.0"
+  },
+  "packageManager": "pnpm@11.24.0",
+  "keywords": [
+    "electrical-engineering",
+    "elektrik",
+    "voltage-drop",
+    "power-factor",
+    "three-phase",
+    "short-circuit",
+    "typescript",
+    "cli"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "verify": "node verify/run-verify.mjs"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^24.19.2",
+    "eslint": "^10.14.0",
+    "typescript": "~6.0.3",
+    "typescript-eslint": "^8.72.1",
+    "vite": "^8.3.5",
+    "vitest": "^5.0.5"
+  }
+}
